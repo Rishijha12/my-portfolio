@@ -51,9 +51,8 @@ function App() {
               Get in Touch
             </a>
             <a
-              href="https://example.com/rishi-jha-resume.pdf"
-              target="_blank"
-              rel="noreferrer"
+              href="/resume.pdf"
+              download="Rishi_Jha_Resume.pdf"
               className="button button-tertiary"
             >
               Download Resume
