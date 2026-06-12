@@ -31,7 +31,7 @@ html {
 body {
   margin: 0;
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background: radial-gradient(circle at top, #1e293b 0%, #020617 65%);
+  background: radial-gradient(circle at top, rgba(30, 41, 59, 0.4) 0%, rgba(2, 6, 23, 0.95) 65%), var(--bg);
   color: var(--text);
 }
 
@@ -43,6 +43,10 @@ body {
   min-height: 100vh;
   background: linear-gradient(180deg, rgba(4, 11, 29, 0.96) 0%, rgba(6, 16, 44, 0.98) 100%);
   color: var(--text);
+}
+
+.theme-light .App {
+  background: var(--surface);
 }
 
 .navbar {
@@ -57,6 +61,11 @@ body {
   background: rgba(4, 11, 29, 0.82);
   backdrop-filter: blur(18px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.theme-light .navbar {
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.12);
 }
 
 .brand {
@@ -113,6 +122,18 @@ body {
     linear-gradient(180deg, rgba(10, 18, 46, 0.96), rgba(4, 11, 29, 0.98));
 }
 
+.theme-light .hero-section {
+  background: #ffffff;
+}
+
+.theme-light .hero-copy,
+.theme-light .hero-section,
+.theme-light .hero-title,
+.theme-light .eyebrow,
+.theme-light .hero-copy h1 {
+  color: var(--text);
+}
+
 .hero-copy {
   max-width: 660px;
 }
@@ -130,6 +151,7 @@ body {
   margin: 0;
   font-size: clamp(3rem, 6vw, 4.8rem);
   line-height: 0.98;
+  color: var(--text);
 }
 
 .hero-title {
@@ -167,6 +189,11 @@ body {
   display: block;
   font-size: 1.5rem;
   color: #ffffff;
+}
+
+.theme-light .stat-card strong {
+  color: #0f172a;
+  font-size: 2rem;
 }
 
 .stat-card span {
@@ -234,8 +261,8 @@ body {
 }
 
 .timeline-card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
   border-radius: 22px;
   padding: 26px;
 }
@@ -276,8 +303,8 @@ body {
 }
 
 .skill-group {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
   border-radius: 22px;
   padding: 24px;
 }
@@ -299,8 +326,8 @@ body {
 }
 
 .project-card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
   border-radius: 24px;
   padding: 28px;
   transition: transform 250ms ease, box-shadow 250ms ease, border-color 250ms ease;
@@ -447,6 +474,18 @@ body {
   background: rgba(255, 255, 255, 0.06);
   color: var(--text);
   border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.theme-light .button-primary {
+  background: #0f172a;
+  color: #ffffff;
+}
+
+.theme-light .button-secondary,
+.theme-light .button-tertiary {
+  background: transparent;
+  color: #0f172a;
+  border: 1px solid rgba(15, 23, 42, 0.16);
 }
 
 .footer {

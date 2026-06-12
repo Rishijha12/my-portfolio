@@ -7,7 +7,6 @@ function App() {
   const handleSubmit = (event) => {
     event.preventDefault();
     alert('Thanks for reaching out! I will reply soon.');
-    event.target.reset();
   };
 
   return (
@@ -40,7 +39,7 @@ function App() {
           <p className="eyebrow">iOS Developer</p>
           <h1>Rishi Jha</h1>
           <p className="hero-title">
-            3+ years building native iOS apps with Swift &amp; SwiftUI. Currently shipping
+            5+ years building native iOS apps with Swift &amp; SwiftUI. Currently shipping
             real-time audio/video calling with WebRTC at PerfectionGeeks Technologies.
           </p>
           <div className="hero-actions">
@@ -60,7 +59,7 @@ function App() {
           </div>
           <div className="hero-stats">
             <div className="stat-card">
-              <strong>3+</strong>
+              <strong>5+</strong>
               <span>Years Experience</span>
             </div>
             <div className="stat-card">
@@ -112,6 +111,18 @@ function App() {
                 <li>
                   <span className="role">Upsquare</span>
                   <span className="period">May 2023 – Sep 2023</span>
+                </li>
+                <li>
+                  <span className="role">Techuz InfoWeb Pvt. Ltd.</span>
+                  <span className="period">Jan 2022 – May 2023</span>
+                </li>
+                <li>
+                  <span className="role">I-Verve Infoweb INC</span>
+                  <span className="period">Feb 2021 – Jan 2022</span>
+                </li>
+                <li>
+                  <span className="role">Impero IT Services Pvt. Ltd.</span>
+                  <span className="period">Aug 2019 – Aug 2020</span>
                 </li>
               </ul>
             </div>
@@ -224,7 +235,14 @@ function App() {
                 </div>
               </div>
             </div>
-            <form className="contact-form" onSubmit={handleSubmit}>
+            <form
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              className="contact-form"
+              onSubmit={handleSubmit}
+            >
+              <input type="hidden" name="form-name" value="contact" />
               <label>
                 Name
                 <input type="text" name="name" placeholder="Your name" required />
